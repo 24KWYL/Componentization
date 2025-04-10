@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Componentization"
 include(":app")
- 
+include(":annotation-processor")
+include(":annotation")
