@@ -42,10 +42,11 @@ class ServiceProcessor(
 
     private fun generateRegistryClass() {
         val packageName = "com.example.generated"
-        val fileName = "ServiceRegistry.kt"
+        val className = "ServiceRegistry_${System.currentTimeMillis()}"
+        val fileName = "${className}"
         FileSpec.builder(packageName, fileName)
             .addType(
-                TypeSpec.classBuilder("ServiceRegistry")
+                TypeSpec.classBuilder(className)
                     .addFunction(createMapperFunction())
                     .build()
             )
